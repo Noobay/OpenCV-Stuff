@@ -15,15 +15,14 @@ def find_diff(image_source_1, image_source_2):
     if len(image_source_1) != len(image_source_2):
         print('image dimensions do not match')
 
-    diff_array = zeros(image_source_1.shape)
+    diff_array = zeros(image_source_2.shape)
+    print image_source_2.shape
     # that white cream filling... mmm mmm
     diff_array.fill(50)
 
     for i in range(image_source_2.shape[0]):
         for r in range(image_source_2.shape[1]):
-            if image_source_2[i, r].any() == image_source_1[i, r].any():
-                diff_array[i, r] =  image_source_1[i, r]-image_source_2[i, r]
-
+            diff_array[i, r] = image_source_1[i, r]-image_source_2[i, r]
 
     return diff_array
 
