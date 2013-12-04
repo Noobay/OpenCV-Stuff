@@ -47,4 +47,4 @@ if __name__ == "__main__":
     image_source_1, image_source_2 = load_images('core.jpg', 'core2.jpg')
     diff = find_diff(image_source_1, image_source_2)
 
-    imwrite("diff.png", diff)
+    imwrite(path_dest, diff)
