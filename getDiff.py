@@ -1,5 +1,5 @@
 import sys
-from numpy import zeros
+from numpy import zeros, ndarray
 from cv2 import imread, imwrite
 
 def load_images(path_source_1, path_source_2):
@@ -21,8 +21,8 @@ def find_diff(image_source_1, image_source_2):
 
     for i in range(image_source_2.shape[0]):
         for r in range(image_source_2.shape[1]):
-            if image_source_2[i, r].all() != image_source_1[i, r].all():
-                diff_array[i, r] = image_source_2[i, r]
+            if image_source_2[i, r].any() == image_source_1[i, r].any():
+                diff_array[i, r] =  image_source_1[i, r]-image_source_2[i, r]
 
 
     return diff_array
