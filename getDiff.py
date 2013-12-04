@@ -42,7 +42,7 @@ if __name__ == "__main__":
         path_source_1, path_source_2 = args
         path_dest = 'diff.'+path_source_1.split('.')[1]
 
-    image_source_1, image_source_2 = load_images('core.jpg', 'core2.jpg')
+    image_source_1, image_source_2 = load_images(path_source_1, path_source_2)
     diff = find_diff(image_source_1, image_source_2)
 
     imwrite(path_dest, diff)
