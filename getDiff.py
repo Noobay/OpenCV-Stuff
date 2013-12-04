@@ -17,17 +17,12 @@ def find_diff(image_source_1, image_source_2):
 
     diff_array = zeros(image_source_2.shape)
     print image_source_2.shape
-    # that white cream filling... mmm mmm
-    diff_array.fill(50)
 
     for i in range(image_source_2.shape[0]):
         for r in range(image_source_2.shape[1]):
             diff_array[i, r] = image_source_1[i, r]-image_source_2[i, r]
 
     return diff_array
-
-
-
 
 if __name__ == "__main__":
 
