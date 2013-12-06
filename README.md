@@ -1,6 +1,5 @@
 OpenCV-Stuff
 ============
-Created by Adar Grof
 
 
 for best results, put the file with the added content in the second path
